@@ -1,0 +1,19 @@
+import openpyxl
+file=openpyxl.load_workbook('Student_data.xlsx')
+sheet=file.active
+
+for row in sheet.rows:
+    for cell in row:
+        
+        if row[0].value == 'mmr':
+            rowget=row[0]
+            nu=str(rowget)[14:-1]
+            number=str(rowget)[15:-1]
+#               print(nu)
+#               print(number)
+   
+      ###########################gggggg
+        m1=sheet.cell(row=cell.row,column=cell).value
+        print(m1 )   
+        
+   
